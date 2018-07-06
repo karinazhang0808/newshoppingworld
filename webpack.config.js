@@ -2,7 +2,7 @@
 * @Author: JiaoweiZhang
 * @Date:   2018-06-04 12:36:30
 * @Last Modified by:   JiaoweiZhang
-* @Last Modified time: 2018-06-29 15:22:05
+* @Last Modified time: 2018-07-04 13:43:40
 */
 var webpack           = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -20,7 +20,6 @@ var getHtmlConfig =function(name){
             inject   : true,
             hash     : true,
             chunks   : ['common',name]
-
     };
 };
 var config = {
@@ -41,7 +40,16 @@ var config = {
         loaders: [
             { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader") },
             { test: /\.(gif|png|jpg|woff|svg|eot|ttfeot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]'}
-            ]
+        ]
+    },
+    resolve : {
+        alias : {
+            node_modules    : __dirname + '/node_modules',
+            util            : __dirname + '/src/util',
+            page            : __dirname + '/src/page',
+            service         : __dirname + '/src/service',
+            image           : __dirname + '/src/image'
+        }
     },
     plugins: [
         //independent modules js/base.js

@@ -1,0 +1,23 @@
+/*
+* @Author: JiaoweiZhang
+* @Date:   2018-07-04 20:41:41
+* @Last Modified by:   JiaoweiZhang
+* @Last Modified time: 2018-07-04 20:46:49
+*/
+.footer{
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+.footer .links{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
+.footer .links .link{
+    padding: 0 10px;
+}
+.footer .copyright{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
