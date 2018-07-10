@@ -2,7 +2,7 @@
 * @Author: JiaoweiZhang
 * @Date:   2018-06-04 12:36:30
 * @Last Modified by:   JiaoweiZhang
-* @Last Modified time: 2018-07-04 13:43:40
+* @Last Modified time: 2018-07-10 13:02:36
 */
 var webpack           = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -13,10 +13,11 @@ var WEBPACK_ENV       = process.env.WEBPACK_ENV || 'dev';
 console.log(WEBPACK_ENV);
 
 // the method of getting parameters of html-webpack-plugin
-var getHtmlConfig =function(name){
+var getHtmlConfig =function(name, title){
     return {
             template : './src/view/' +name+ '.html',
             filename : 'view/' +name+ '.html',
+            title    : title,
             inject   : true,
             hash     : true,
             chunks   : ['common',name]
@@ -24,9 +25,10 @@ var getHtmlConfig =function(name){
 };
 var config = {
     entry: {
-      'common': ['./src/page/common/index.js','webpack-dev-server/client?http://localhost:8088/'],
-      'index' : ['./src/page/index/index.js'],
-      'login' : ['./src/page/login/index.js'],
+      'common'  : ['./src/page/common/index.js','webpack-dev-server/client?http://localhost:8088/'],
+      'index'   : ['./src/page/index/index.js'],
+      'login'   : ['./src/page/login/index.js'],
+      'result'  : ['./src/page/result/index.js'],
     },
     output:{
         path: './dist',
@@ -39,7 +41,8 @@ var config = {
     module: {  
         loaders: [
             { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader") },
-            { test: /\.(gif|png|jpg|woff|svg|eot|ttfeot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]'}
+            { test: /\.(gif|png|jpg|woff|svg|eot|ttfeot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]'},
+            { test: /\.string$/, loader: 'html-loader'}
         ]
     },
     resolve : {
@@ -60,8 +63,9 @@ var config = {
         //separately package css into file
         new ExtractTextPlugin("css/[name].css"),
         //processing of HTML modules
-        new HtmlWebpackPlugin(getHtmlConfig('index')),
-        new HtmlWebpackPlugin(getHtmlConfig('login')),      
+        new HtmlWebpackPlugin(getHtmlConfig('index','Home')),
+        new HtmlWebpackPlugin(getHtmlConfig('login','user login')),    
+        new HtmlWebpackPlugin(getHtmlConfig('result','NSWD')),   
     ]
 };
 
