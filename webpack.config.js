@@ -2,7 +2,7 @@
 * @Author: JiaoweiZhang
 * @Date:   2018-06-04 12:36:30
 * @Last Modified by:   JiaoweiZhang
-* @Last Modified time: 2018-07-10 13:02:36
+* @Last Modified time: 2018-07-23 15:35:00
 */
 var webpack           = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -25,10 +25,15 @@ var getHtmlConfig =function(name, title){
 };
 var config = {
     entry: {
-      'common'  : ['./src/page/common/index.js','webpack-dev-server/client?http://localhost:8088/'],
-      'index'   : ['./src/page/index/index.js'],
-      'login'   : ['./src/page/login/index.js'],
-      'result'  : ['./src/page/result/index.js'],
+      'common'              : ['./src/page/common/index.js','webpack-dev-server/client?http://localhost:8088/'],
+      'index'               : ['./src/page/index/index.js'],
+      'user-login'          : ['./src/page/user-login/index.js'],
+      'user-register'       : ['./src/page/user-register/index.js'], 
+      'user-pass-reset'     : ['./src/page/user-pass-reset/index.js'],
+      'user-center'         : ['./src/page/user-center/index.js'],
+      'user-center-update'  : ['./src/page/user-center-update/index.js'], 
+      'user-pass-update'    : ['./src/page/user-pass-update/index.js'],      
+      'result'              : ['./src/page/result/index.js'],
     },
     output:{
         path: './dist',
@@ -64,7 +69,12 @@ var config = {
         new ExtractTextPlugin("css/[name].css"),
         //processing of HTML modules
         new HtmlWebpackPlugin(getHtmlConfig('index','Home')),
-        new HtmlWebpackPlugin(getHtmlConfig('login','user login')),    
+        new HtmlWebpackPlugin(getHtmlConfig('user-login','user login')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-register','sign up')),  
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','Forgot password')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center','My Account')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-center-update','Edit Personal Information')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-update','Modify the password')),      
         new HtmlWebpackPlugin(getHtmlConfig('result','NSWD')),   
     ]
 };

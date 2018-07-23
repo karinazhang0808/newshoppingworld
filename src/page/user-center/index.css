@@ -1,0 +1,16 @@
+/*
+* @Author: JiaoweiZhang
+* @Date:   2018-07-19 13:24:40
+* @Last Modified by:   JiaoweiZhang
+* @Last Modified time: 2018-07-22 14:24:06
+*/
+.form-line{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.form-line .label{
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+}

@@ -2,7 +2,7 @@
 * @Author: JiaoweiZhang
 * @Date:   2018-07-04 11:03:30
 * @Last Modified by:   JiaoweiZhang
-* @Last Modified time: 2018-07-04 13:38:37
+* @Last Modified time: 2018-07-19 14:16:38
 */
 *{
 
@@ -32,6 +32,24 @@ input[type='checkbox']{
     width: 1080px;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
+}
+
+/* panel */
+.panel{
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.panel .panel-title{
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+.panel .panel-body{
+    padding: 10px;
     overflow: hidden;
 }
 

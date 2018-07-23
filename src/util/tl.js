@@ -2,7 +2,7 @@
 * @Author: JiaoweiZhang
 * @Date:   2018-07-03 10:42:10
 * @Last Modified by:   JiaoweiZhang
-* @Last Modified time: 2018-07-03 13:16:21
+* @Last Modified time: 2018-07-11 12:32:56
 */
 
 'use strict';
@@ -80,7 +80,7 @@ var _tl ={
     },
     //uniform login process
     doLogin : function(){
-        window.location.href ='./login.html?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href ='./user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     goHome  : function(){
         window.location.href = './index.html';

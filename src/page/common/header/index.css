@@ -2,7 +2,7 @@
 * @Author: JiaoweiZhang
 * @Date:   2018-07-09 12:24:33
 * @Last Modified by:   JiaoweiZhang
-* @Last Modified time: 2018-07-09 13:16:08
+* @Last Modified time: 2018-07-19 14:05:19
 */
 /*header*/
 .header .logo{
@@ -13,6 +13,7 @@
     display: block;
     font-size: 36px;
     color: #c60023;
+    text-decoration: none;
 }
 
 .header .search-con{
@@ -31,4 +32,15 @@
     position: absolute;
     height: 44px;
     width: 100px;
+}
+
+
+.crumb{
+    margin-bottom: 15px;
+    height: 50px;
+    line-height: 50px;
+    background: #eee;
+    color: #888;
+    font-size: 14px;
+    border-top: 2px  solid #c60023;
 }

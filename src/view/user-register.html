@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%= require('html-loader!./layout/head-common.html')  %>
+        <title><%= htmlWebpackPlugin.options.title%> - newshoppingworld</title>
+    </head>
+    <body>
+        <%= require('html-loader!./layout/nav-simple.html')  %>
+        <div class="page-wrap">
+            <div class="w">
+                <div class="user-con">
+                    <div class="user-title">Sign up</div>
+                    <div class="user-box">
+                        <div class="error-item">
+                            <i class="fa fa-minus-circle error-icon"></i>
+                            <p class="err-msg">Error</p>
+                        </div>
+                        <div class="user-item">
+                            <label class="user-label" for="username">
+                                <i class="fa fa-user"></i>
+                            </label>
+                            <input class="user-content" id="username" placeholder="Username" autocomplete="off">
+                        </div>
+                        <div class="user-item">
+                            <label class="user-label" for="password">
+                                <i class="fa fa-lock"></i>
+                            </label>
+                            <input type="password" class="user-content" id="password" placeholder="Password" autocomplete="off">
+                        </div>
+                        <div class="user-item">
+                            <label class="user-label" for="password-confirm">
+                                <i class="fa fa-lock"></i>
+                            </label>
+                            <input type="password" class="user-content" id="password-confirm" placeholder="Confirm password" autocomplete="off">
+                        </div>
+                        <div class="user-item">
+                            <label class="user-label" for="phone">
+                                <i class="fa fa-phone"></i>
+                            </label>
+                            <input class="user-content" id="phone" placeholder="Phone number" autocomplete="off">
+                        </div>
+                        <div class="user-item">
+                            <label class="user-label" for="email">
+                                <i class="fa fa-envelope"></i>
+                            </label>
+                            <input class="user-content" id="email" placeholder="Email" autocomplete="off">
+                        </div>
+                        <div class="user-item">
+                            <label class="user-label" for="question">
+                                <i class="fa fa-question"></i>
+                            </label>
+                            <input class="user-content" id="question" placeholder="Please enter your security question" autocomplete="off">
+                        </div>
+                        <div class="user-item">
+                            <label class="user-label" for="answer">
+                                <i class="fa fa-key"></i>
+                            </label>
+                            <input class="user-content" id="answer" placeholder="Please enter your answer" autocomplete="off">
+                        </div>
+                        <a class="btn btn-submit" id="submit">Sign up</a>
+                        <div class="link-item">
+                            <a class="link" href="./user-login.html">Already have an account? Sign in>></a>
+                        </div>
+                    </div>  
+                </div>                
+            </div>
+        </div>
+        <%= require('html-loader!./layout/footer.html')  %>
+    </body>
+</html>

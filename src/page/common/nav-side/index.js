@@ -2,7 +2,7 @@
 * @Author: JiaoweiZhang
 * @Date:   2018-07-04 14:28:46
 * @Last Modified by:   JiaoweiZhang
-* @Last Modified time: 2018-07-10 12:34:51
+* @Last Modified time: 2018-07-23 15:36:00
 */
 'use strict';
 require('./index.css');
@@ -15,7 +15,7 @@ var navSide = {
         navList :[
             {name: 'user-center', desc: 'My Account',       href: './user-center.html'},
             {name: 'order-list', desc: 'My Order',         href: './order-list.html'},
-            {name: 'pass-update', desc: 'Change Password',  href: './pass-update.html'},
+            {name: 'pass-update', desc: 'Change Password',  href: './user-pass-update.html'},
             {name: 'about', desc: 'About NSWD',       href: './about.html'}
         ]
     },

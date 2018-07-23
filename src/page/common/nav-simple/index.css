@@ -2,7 +2,7 @@
 * @Author: JiaoweiZhang
 * @Date:   2018-07-04 14:28:57
 * @Last Modified by:   JiaoweiZhang
-* @Last Modified time: 2018-07-04 14:37:42
+* @Last Modified time: 2018-07-19 14:06:00
 */
 .nav-simple{
     height: 60px;
@@ -14,4 +14,5 @@
     font-size: 26px;
     font-weight: bold;
     color: #c60023;
+    text-decoration: none;
 }
